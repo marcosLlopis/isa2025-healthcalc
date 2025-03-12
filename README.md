@@ -56,15 +56,15 @@ En total, se han implementado 12 pruebas, incluyendo algunas parametrizadas. Tod
 
 Abra con su IDE el fichero “TEST-healthcalc.HealthCalcTest.xml” dentro de la carpeta “target/surefire-reports” que contiene el resultado de ejecutar los tests.
 
-<p align="center">
-<img src="https://github.com/marcosLlopis/isa2025-healthcalc/tree/main/image.png" width="100" title="Test">
-</p>
-
-![](https://github.com/marcosLlopis/isa2025-healthcalc/tree/main/image.png)
-
-
+![alt text](image.png)
 ![alt text](image-1.png)
-<a name="Repositorio"> </a>
+
+
+
+<a name="Repositorio"></a>
 # Desarrollo del repositorio:
 Durante el laboratorio, se utilizo `git` para trabajar de manera cómoda, eficiente y segura, pudiendo publicar continuamente los avances del proyecto, metodología muy útil para tener una mayor perspectiva de la linealidad del proyecto y poder retroceder en caso de equivocaciones.
+
+![alt text](image-3.png)
+
 
