@@ -1,7 +1,8 @@
 package healthcalc;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -9,29 +10,24 @@ import org.junit.jupiter.api.Test;
 public class HealthCalcTest {
 	private final health calculadora = new health();
 
-	@Test
-	@DisplayName("Esto es un test de ejemplo.")
-	public void bmi() {
-		assertEquals(true, true);
-	}
 
 
-	//////////////////Test para metodo IW///////////////////////////
+//////////////////Test para metodo IW///////////////////////////
 
 	//1
 	@Test
 	@DisplayName("Test de Altura menor a la esperada IW")
 	public void testAlturaMenor() {
 		assertThrows(IllegalArgumentException.class,
-		() -> calculadora.idealWeight(79, 'M'), 
+		() -> calculadora.idealWeight(79, 'M'),
 		"La altura introducida es menor a la esperada ");
 	}
 	//2
 	@Test
 	@DisplayName("Test de Altura mayor a la esperada IW")
 	public void testAlturaMayorPosibleIW() {
-		assertThrows(IllegalArgumentException.class, 
-		() -> calculadora.idealWeight(45759, 'M'), 
+		assertThrows(IllegalArgumentException.class,
+		() -> calculadora.idealWeight(45759, 'M'),
 		"La altura introducida es demasiado alta");
 	}
 
@@ -70,8 +66,64 @@ public class HealthCalcTest {
 	}
 
 /////////////Test para metodo BMR////////////////////////
+@Test //1
+	@DisplayName("Test peso incorrecto BMR")
+	public void testPesoBMR() {
+		assertThrows(IllegalArgumentException.class,
+		() -> calculadora.basalMetabolicRate(-5784, 170, 22, 'M'), 
+		"valor de peso incorrecto ");
+	}
+	@Test //2  
+	@DisplayName("Test Altura incorrecta BMR")
+	public void testAlturaBMR() {
+		assertThrows(IllegalArgumentException.class, 
+		() -> calculadora.basalMetabolicRate(60, 1, 22, 'M'), 
+		"valor de altura incorrecto");
+	}
+	@Test //3    
+	@DisplayName("Test entrada incorrecta sexo BMR")
+	public void testSexoBMR() {
+		assertThrows(IllegalArgumentException.class, 
+		() -> calculadora.basalMetabolicRate(76, 110, 30, 'a'), 
+		"valor de sexo incorrecto");
+	}
+	@Test //4
+	@DisplayName("Test entrada incorrecta edad BMR")
+	public void testEdadBMR() {
+		assertThrows(IllegalArgumentException.class, 
+		() -> calculadora.basalMetabolicRate(60, 168, 20001, 'M'), 
+		"edad incorrecto ");
+	}
+	@Test //5
+	@DisplayName("Todo mal")
+	public void malBMR() {
+		assertThrows(IllegalArgumentException.class, 
+		() -> calculadora.basalMetabolicRate(1, 1, 356, 'p'), 
+		"valores introducidos no son adecuados para el calculo");
+	}
 
+	@Test //7
+	@DisplayName("Test mujer promedio BMR")
+	public void testWomanBMR() throws Exception{
+		float BMR = (float) (10 * 21 + 6.25 * 150 - 5 * 13 - 161);
+		assertEquals(BMR, calculadora.basalMetabolicRate(21, 150, 'w', 13));
 
+		BMR = (float) (10 * 70 + 6.25 * 170 - 5 * 22 - 161);
+		assertEquals(BMR, calculadora.basalMetabolicRate(70, 170, 'w', 22));
 
+	}
+	@Test //8
+	@DisplayName("Test hombre promedio BMR")
+	public void testMenBMR() throws Exception{
+		float BMR = (float) (10 * 21 + 6.25 * 150 - 5 * 13 + 5);
+		assertEquals(BMR, calcu.basalMetabolicRate(21, 150, 'M', 13));
 
+		BMR = (float) (10 * 65 + 6.25 * 167 - 5 * 22 + 5);
+		assertEquals(BMR, calcu.basalMetabolicRate(65, 167, 'M', 22));
+
+		BMR = (float) (10 * 80 + 6.25 * 170 - 5 * 55 + 5);
+		assertEquals(BMR, calcu.basalMetabolicRate(80, 170, 'M', 55));
+	}
+
+	
 }
