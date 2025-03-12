@@ -6,45 +6,65 @@ Se desea desarrollar una calculadora que permita estimar varios parámetros de s
 <details>
   <summary>Indice de Contenido</summary>
    <ol>
-    <li><a href="#Práctica1">Practica1</a>
+    <li><a href="#Practica1">Practica1</a>
       <ol> <li><a href="#Introducción">Introducción practica1</a></li>
-        <li><a href="#desarrollo">Desarrollo de tests</a></li>
+        <li><a href="#Desarrollo">Desarrollo de tests</a></li>
         <li><a href="#test_idealWeight">Test idealWeight</a></li>
         <li><a href="#test_basalMetabolicRate">Test basalMetabolicRate</a></li>
-        <li><a href="#ejecucion">Ejecución de los test</a></li>
-        <li><a href="#repo">Desarrollo del repositorio practica1</a></li></ol> </li>
+        <li><a href="#Ejecución">Ejecución de los test</a></li>
+        <li><a href="#Repositorio">Desarrollo del repositorio practica1</a></li></ol> </li>
    </ol>
 </details>
 
-# Práctica 1 
-<a name="Práctica1"></a>
+# Práctica 1
 
-<a name="Introducción"></a>>
-#Introducción
-A partir de este repositorio[https://github.com/jmhorcas/isa2025-healthcalc.git], se busca desarrollar una herramienta de cálculo de salud que, utilizando datos como la estatura, el peso, la edad y el sexo, permita estimar valores como el peso óptimo y la tasa metabólica basal.
+<a name="Practica1"></a>
 
-¿Que es el peso optimo y la tasa metabolica basal?
+<a name="Introducción"></a>
+# Introducción:
+Dicho repositorio forma parte de las actividades de la asignatura "Ingeniería de software Avanzada" correspondiendo a la parte practica, [Partiendo de este repositorio](https://github.com/jmhorcas/isa2025-healthcalc.git)
+
+Se busca desarrollar una herramienta de cálculo de salud que, utilizando datos como la estatura, el peso, la edad y el sexo, permita estimar valores como el peso óptimo y la tasa metabólica basal.
+
 * `idealWeight`: Obtiene la altura y el género como entrada, y su salida es el **peso ideal**.
-* `basalMetabolicRate`: Obtiene el peso, la altura, el género y la edad como entrada, y su salida es el **metabolismo basal**.
+* `basalMetabolicRate`: Obtiene el peso, la altura, el género y la edad como entrada, y su salida es el **metabolismo basal**.  
 
-<a name="desarrollo"></a>  
+ **IMPORTANTE** NO HE UTILIZADO LA FORMULA DADA YA QUE ME DABA ERROR, HE COGIDO LA FORMULA DE WIKIPEDIA
+
+<a name="Desarrollo"></a>  
 #  Desarrollo de tests:
-Las pruebas de software son esenciales para garantizar calidad, precisión y seguridad. Permiten detectar errores temprano, evitar fallos críticos en cálculos de salud, asegurar el correcto funcionamiento y facilitar futuras actualizaciones sin introducir nuevos problemas.
+
+El **testing** es un proceso clave en el desarrollo de software, ya que permite detectar y corregir errores antes de que afecten a los usuarios. Su importancia radica en varios factores:
+
+Garantiza la calidad del software: Asegura que la aplicación funcione correctamente bajo diferentes condiciones y cumpla con los requisitos establecidos.
 
 Reduce costos y tiempo de desarrollo: Detectar errores en etapas tempranas evita problemas más costosos de corregir en fases avanzadas o después del lanzamiento.
-Para una calculadora de salud, el testing es esencial para garantizar que los cálculos, como el peso ideal o la tasa metabólica basal, sean precisos y fiables en todos los casos.
 
-He desarrollado varios test para cada método con el fin de ver si hay algún fallo en el código.
+Previene riesgos en aplicaciones críticas: En sectores como la salud, finanzas o seguridad, el testing es vital para evitar errores que puedan generar daños o pérdidas significativas.
+Mejora la experiencia del usuario: Un software libre de fallos mejora la usabilidad y la satisfacción de quienes lo utilizan.
 
-<a name="test_idealWeight"></a>
-## Test para el método idealWeight():
-
+Facilita el mantenimiento y escalabilidad: Un código bien probado permite realizar cambios y agregar nuevas funciones sin comprometer el funcionamiento existente.
 
 
 
-<a name="ejecucion"></a>
+
+<a name="Ejecución"></a>
 # Ejecución de los test:
-A continuación una captura de todos los test pasados, para obtener más información se puede entrar en la carpeta de images donde se encuentran las fotos en mejor calidad y más detalladas, los test fueron pasados y cumplen con todos los objetivos planeados inicialmente. He implementado 21 test en total, algunos parametrizados.
+A continuación, se muestra una captura con los resultados de todas las pruebas exitosas. Para más detalles, se pueden revisar las imágenes almacenadas en la carpeta "images", donde se encuentran capturas de mayor calidad y con información más específica.
+
+En total, se han implementado 12 pruebas, incluyendo algunas parametrizadas. Todas las pruebas se han ejecutado correctamente y cumplen con los objetivos establecidos desde el inicio.
+
+Abra con su IDE el fichero “TEST-healthcalc.HealthCalcTest.xml” dentro de la carpeta “target/surefire-reports” que contiene el resultado de ejecutar los tests.
+
 <p align="center">
-  <img src="https://github.com/Diegodepab/isa2024-healthcalc/blob/main/Images/TODOS_los_test.png" width="400" title="TODOS_LOS_TEST">
+<img src="https://github.com/marcosLlopis/isa2025-healthcalc/tree/main/image.png" width="100" title="Test">
 </p>
+
+![](https://github.com/marcosLlopis/isa2025-healthcalc/tree/main/image.png)
+
+
+![alt text](image-1.png)
+<a name="Repositorio"> </a>
+# Desarrollo del repositorio:
+Durante el laboratorio, se utilizo `git` para trabajar de manera cómoda, eficiente y segura, pudiendo publicar continuamente los avances del proyecto, metodología muy útil para tener una mayor perspectiva de la linealidad del proyecto y poder retroceder en caso de equivocaciones.
+

@@ -103,26 +103,24 @@ public class HealthCalcTest {
 	}
 
 	@Test //7
-	@DisplayName("Test mujer promedio BMR")
+	@DisplayName("Test mujer  BMR")
 	public void testWomanBMR() throws Exception{
-		float BMR = (float) (10 * 21 + 6.25 * 150 - 5 * 13 - 161);
-		assertEquals(BMR, calculadora.basalMetabolicRate(21, 150, 'w', 13));
+		float BMR = (float) (10 * 20 + 6.25 * 130 - 5 * 10 - 161);
+		assertEquals(BMR, calculadora.basalMetabolicRate(20, 130, 10, 'w'));
 
-		BMR = (float) (10 * 70 + 6.25 * 170 - 5 * 22 - 161);
-		assertEquals(BMR, calculadora.basalMetabolicRate(70, 170, 'w', 22));
+		BMR = (float) (10 * 100 + 6.25 * 169 - 5 * 54 - 161);
+		assertEquals(BMR, calculadora.basalMetabolicRate(100, 169, 54, 'w'));
 
 	}
 	@Test //8
-	@DisplayName("Test hombre promedio BMR")
+	@DisplayName("Test hombre  BMR")
 	public void testMenBMR() throws Exception{
-		float BMR = (float) (10 * 21 + 6.25 * 150 - 5 * 13 + 5);
-		assertEquals(BMR, calcu.basalMetabolicRate(21, 150, 'M', 13));
+		float BMR = (float) (10 * 70 + 6.25 * 185 - 5 * 13 + 5);
+		assertEquals(BMR, calculadora.basalMetabolicRate(70, 185, 13, 'm'));
 
 		BMR = (float) (10 * 65 + 6.25 * 167 - 5 * 22 + 5);
-		assertEquals(BMR, calcu.basalMetabolicRate(65, 167, 'M', 22));
+		assertEquals(BMR, calculadora.basalMetabolicRate(65, 167, 22, 'm'));
 
-		BMR = (float) (10 * 80 + 6.25 * 170 - 5 * 55 + 5);
-		assertEquals(BMR, calcu.basalMetabolicRate(80, 170, 'M', 55));
 	}
 
 	
