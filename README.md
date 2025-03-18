@@ -155,7 +155,7 @@ Trigger: El usuario indica que quiere calcular un peso ideal (selecciona la opci
 5.	El sistema muestra en pantalla el BMR para los parámetros dados.
 
 Escenario Alternativos:
-3b) el usuario se equivoca al introducir algún parámetro.
+3b) el usuario se equivoca al introducir algún parámetro
 3b1) El sistema muestra un error (especificando que campo tiene el error y una posible razón) y vuelve al paso 2.
 
 
