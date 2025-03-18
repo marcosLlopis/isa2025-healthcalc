@@ -86,16 +86,18 @@ El segundo paso es  **La realización deun diagrama de casos de uso UML para la 
 2. La segunda función será la **El cálculo de tu requerimiento calórico diario** depende de varios factores: edad, sexo, peso, altura, nivel de actividad física.
 
   Primero calcularemos la Tasa Metabolica Basal ya vista en la pratica 1:
+
       Hombres > TMB=(10×peso kg)+(6.25×altura cm)−(5×edad)+5.
+
       Mujeres > TMB=(10×peso kg)+(6.25×altura cm)−(5×edad)−161.
   
   Despues lo multiplicaremos por el nivel de actividad:
 
-    **Sedentario** (poco o nada de ejercicio) → ×1.2
-    **Ligero** (ejercicio ligero 1-3 días/semana) → ×1.375
-    **Moderado** (ejercicio moderado 3-5 días/semana) → ×1.55
-    **Activo** (ejercicio intenso 6-7 días/semana) → ×1.725
-    **Muy activo** (entrenamiento muy intenso o trabajo físico fuerte) → ×1.9
+    Sedentario (poco o nada de ejercicio) → ×1.2
+    Ligero (ejercicio ligero 1-3 días/semana) → ×1.375
+    Moderado (ejercicio moderado 3-5 días/semana) → ×1.55
+    Activo (ejercicio intenso 6-7 días/semana) → ×1.725
+    Muy activo (entrenamiento muy intenso o trabajo físico fuerte) → ×1.9
 
 Despues para terminar la práctica escogeremos uno de los casos de uso y lo especificaremos definiendo todas las características que considere oportunas (nombre, actor principal, ámbito, nivel, stakeholders e intereses, precondiciones, garantías mínimas, garantía de éxito, escenario principal, escenarios alternativos, extensiones,…).   
 
@@ -105,9 +107,58 @@ Despues para terminar la práctica escogeremos uno de los casos de uso y lo espe
 Aqui presento el diagrama de caso de uso a implementar con los dos casos de la practica 1,el índice de masa corporal (IMB) y El cálculo de tu requerimiento calórico diario.
 
 <p align="center">
-  ![alt text](image-4.png)
+<img src="https://github.com/marcosLlopis/isa2025-healthcalc/blob/f2b1db78f57d021b9e5ec406da3687314d6e6eed/image-4.png" width="750" title="caso de uso">
 </p>
 
+
 <a name="Especificacion"></a>
-# Especificación de Casos de Uso: función IdealWeight.:
+# Especificación de Casos de Uso: función Basal Metabolic Rate:
+
+**1.Stakeholders y sus intereses/objetivos:**
+
+-Usuario: Quiere conocer su tasa metabólica basal para gestionar su ingesta calórica.
+
+-Nutricionistas/Entrenadores personales: Usan la información para recomendar dietas y planes de entrenamiento.
+
+-Aplicación/Sistema de Cálculo: Ofrece el servicio de cálculo y puede integrar funciones adicionales
+
+
+**2.Actor principal:** 
+
+Usuario(Persona interesada en concoer su BMR). 
+
+**3.Alcance:** 
+
+Aplicación HealthCalc (Calculadora de Salud).
+
+
+**4.Precondición:** 
+
+-El usuario debe proporcionar información personal básica: peso, altura, edad y sexo.
+
+-La fórmula de cálculo debe estar correctamente implementada en el sistema
+
+
+**5.Garantias:**
+
+Minima-Se muestra un mensaje de error o resultado al usuario.
+
+De éxito: El usuario obtiene un resultado correcto (su peso ideal).
+
+Trigger: El usuario indica que quiere calcular un peso ideal (selecciona la opción de calcular Peso Ideal en el programa HealthCalc).
+
+**6.Escenario principal:**
+1.	El usuario selecciona la opción de calcular BMR en el programa.
+2.	El sistema pide los parámetros (altura,sexo,edad y peso) al usuario. 
+3.	El usuario introduce los valores de los parámetros.
+4.	El sistema calcula su BMR.
+5.	El sistema muestra en pantalla el BMR para los parámetros dados.
+
+Escenario Alternativos:
+3b) el usuario se equivoca al introducir algún parámetro.
+3b1) El sistema muestra un error (especificando que campo tiene el error y una posible razón) y vuelve al paso 2.
+
+
+
+```
 
