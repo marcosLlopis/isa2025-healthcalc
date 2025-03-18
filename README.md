@@ -6,19 +6,23 @@ Se desea desarrollar una calculadora que permita estimar varios parámetros de s
 <details>
   <summary>Indice de Contenido</summary>
    <ol>
-    <li><a href="#Practica1">Practica1</a>
+    <li><a href="#Practica 1">Practica1</a>
       <ol> <li><a href="#Introducción">Introducción practica1</a></li>
         <li><a href="#Desarrollo">Desarrollo de tests</a></li>
         <li><a href="#test_idealWeight">Test idealWeight</a></li>
         <li><a href="#test_basalMetabolicRate">Test basalMetabolicRate</a></li>
         <li><a href="#Ejecución">Ejecución de los test</a></li>
         <li><a href="#Repositorio">Desarrollo del repositorio practica1</a></li></ol> </li>
+    <li><a href="#Practica 2">Practica2</a></li>
+      <ol> <li><a href="#Introduccion">Introducción practica2</a>
+        <li><a href="#Diagrama caso de uso">Diagrama de casos:</a></li>
+        <li><a href="#Especificacion">especificación del caso de uso</a></li></ol> </li>
    </ol>
 </details>
 
 # Práctica 1
 
-<a name="Practica1"></a>
+<a name="Practica 1"></a>
 
 <a name="Introducción"></a>
 # Introducción:
@@ -67,4 +71,43 @@ Durante el laboratorio, se utilizo `git` para trabajar de manera cómoda, eficie
 
 ![alt text](image-3.png)
 
+
+
+<a name="Practica 2"></a>
+# Práctica 2
+# Introducción 
+
+<a name="Introduccion"></a>
+ En primer lugar la practica 2 consiste en **Gestión de respositorio git y Github** donde se crearán las ramas correspondientes a la practica 1 y practica 2, 
+El segundo paso es  **La realización deun diagrama de casos de uso UML para la calculadora de salud** según lo visto en el tema 2, donde se usará la calculadora de la practica 1 más 2 funciones nuevas en caso de este trabajo:
+
+1. La primera es calcular **el índice de masa corporal (IMB).** El IMB de una persona se calcula mediante la siguiente fórmula: `BMI = mass (kg) / height^2(m) `.
+
+2. La segunda función será la **El cálculo de tu requerimiento calórico diario** depende de varios factores: edad, sexo, peso, altura, nivel de actividad física.
+
+  Primero calcularemos la Tasa Metabolica Basal ya vista en la pratica 1:
+      Hombres > TMB=(10×peso kg)+(6.25×altura cm)−(5×edad)+5.
+      Mujeres > TMB=(10×peso kg)+(6.25×altura cm)−(5×edad)−161.
+  
+  Despues lo multiplicaremos por el nivel de actividad:
+
+    **Sedentario** (poco o nada de ejercicio) → ×1.2
+    **Ligero** (ejercicio ligero 1-3 días/semana) → ×1.375
+    **Moderado** (ejercicio moderado 3-5 días/semana) → ×1.55
+    **Activo** (ejercicio intenso 6-7 días/semana) → ×1.725
+    **Muy activo** (entrenamiento muy intenso o trabajo físico fuerte) → ×1.9
+
+Despues para terminar la práctica escogeremos uno de los casos de uso y lo especificaremos definiendo todas las características que considere oportunas (nombre, actor principal, ámbito, nivel, stakeholders e intereses, precondiciones, garantías mínimas, garantía de éxito, escenario principal, escenarios alternativos, extensiones,…).   
+
+<a name="diagrama"></a>
+
+# Diagrama de casos de uso:
+Aqui presento el diagrama de caso de uso a implementar con los dos casos de la practica 1,el índice de masa corporal (IMB) y El cálculo de tu requerimiento calórico diario.
+
+<p align="center">
+  ![alt text](image-4.png)
+</p>
+
+<a name="Especificacion"></a>
+# Especificación de Casos de Uso: función IdealWeight.:
 
