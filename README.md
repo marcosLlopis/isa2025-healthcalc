@@ -19,6 +19,8 @@ Se desea desarrollar una calculadora que permita estimar varios parámetros de s
         <li><a href="#Especificacion">especificación del caso de uso</a></li></ol> </li>
      <li><a href="#Practica 3">Practica3</a></li>
       <ol> <li><a href="#Introducción">Introducción practica3</a>
+      <li><a href="#History Peso Ideal">User Story: Peso ideal de un persona:</a></li>
+      <li><a href="#History Tasa Metabolica Basal">User Story:  Cálculo de la tasa metabólica basal de una persona:</a></li>
    </ol>
 </details>
 
@@ -195,5 +197,25 @@ La metodología BDD (Desarrollo Guiado por el Comportamiento) se enfoca en descr
 **Priorización:** pueden priorizar según su valor para el usuario.
 
 **Colaboración:** Las historias de usuario fomentan la colaboración entre el equipo de desarrollo y el usuario.
-```
 
+
+
+<a name="History Peso Ideal"> </a>
+## User Story:  Cálculo del peso ideal.
+
+Utilizo la estructura implementada en la introducción para definir la historia de usuario del Peso ideal:
+
+***Como usuario de la calculadora de salud, necesito calcular el peso ideal para los parámetros dados 
+Para poder saber el peso ideal***
+
+<a name="History Tasa Metabolica Basal"> </a>
+## User Story:  Cálculo de la tasa metabólica basal.
+
+ El use story será muy parecido al caso de peso ideal porque como su nombre lo indica la idea es seguir una plantilla y un sistema que a pesar de estar en lenguaje natural el programa sea capaz de automatizar parte de los test
+
+Utilizo la estructura implementada en la introducción para definir la historia de usuario de la Tasa Metabolica Basal:
+
+Como usuario de la calculadora de salud, quiero calcular la tasa metabólica basal para los parámetros dados (I want to calculate the basal metabolic rate for the given parameters), para poder saber la tasa metabólica basal(So that I can know the basal metabolic rate).
+
+
+```
