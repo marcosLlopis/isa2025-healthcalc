@@ -21,6 +21,9 @@ Se desea desarrollar una calculadora que permita estimar varios parámetros de s
       <ol> <li><a href="#Introducción">Introducción practica3</a>
       <li><a href="#History Peso Ideal">User Story: Peso ideal de un persona:</a></li>
       <li><a href="#History Tasa Metabolica Basal">User Story:  Cálculo de la tasa metabólica basal de una persona:</a></li>
+       <ol> <li><a href="#Aceptacion Peso Ideal">Criterios de aceptación</a></li></ol> </li>
+       <li><a href="#Aceptacion Metabolica Basal">Criterios de aceptacion</a></li></ol> </li>
+
    </ol>
 </details>
 
@@ -205,8 +208,8 @@ La metodología BDD (Desarrollo Guiado por el Comportamiento) se enfoca en descr
 
 Utilizo la estructura implementada en la introducción para definir la historia de usuario del Peso ideal:
 
-***Como usuario de la calculadora de salud, necesito calcular el peso ideal para los parámetros dados 
-Para poder saber el peso ideal***
+**Como usuario de la calculadora de salud, necesito calcular el peso ideal para los parámetros dados 
+Para poder saber el peso ideal**
 
 <a name="History Tasa Metabolica Basal"> </a>
 ## User Story:  Cálculo de la tasa metabólica basal.
@@ -215,7 +218,65 @@ Para poder saber el peso ideal***
 
 Utilizo la estructura implementada en la introducción para definir la historia de usuario de la Tasa Metabolica Basal:
 
-Como usuario de la calculadora de salud, quiero calcular la tasa metabólica basal para los parámetros dados (I want to calculate the basal metabolic rate for the given parameters), para poder saber la tasa metabólica basal(So that I can know the basal metabolic rate).
+**Como usuario de la calculadora de salud, quiero calcular la tasa metabólica basal para los parámetros dados, para poder saber la tasa metabólica basal.**
+
+
+
+<a name="Aceptacion Peso Ideal"> </a>
+
+## Criterio de Aceptación:  Cálculo del peso ideal de un persona.
+
+Esquema del escenario: altura no válida
+Dado que tengo una calculadora de salud.
+Cuando calculo el peso ideal para una altura no válida <h>
+Entonces la calculadora lanza una excepción.
+
+Esquema del escenario: género no válido
+Dado que tengo una calculadora de salud.
+Cuando calculo el peso ideal para un género no válido <g>
+Entonces la calculadora lanza una excepción.
+
+Esquema del escenario: resultado negativo
+Dado que tengo una calculadora de salud.
+Cuando calculo el peso ideal para el sexo <g> y la altura <h> y da un resultado negativo
+Entonces la calculadora lanza una excepción.
+
+Esquema del escenario: resultado de peso ideal
+Dado que tengo una calculadora de salud.
+Cuando calculo el peso ideal para el sexo <g> y la altura <h>
+Luego la calculadora da un resultado <valor>
+
+
+
+<a name="Aceptación Metabolica Basal"> </a>
+
+## Criterio de Aceptación: Tasa metabólica basal de una persona
+
+Esquema del escenario: altura no válida
+Dado que tengo una calculadora de salud.
+Cuando calculo la tasa metabólica basal de una altura inválida <h>
+Entonces la calculadora lanza una excepción.
+
+Esquema del escenario: genero no válido
+Dado que tengo una calculadora de salud.
+Cuando calculo la tasa metabólica basal de un género no válido <g>
+Entonces la calculadora lanza una excepción.
+
+Esquema del escenario: edad incorrecta
+Dado que tengo una calculadora de salud.
+Cuando estimo la tasa metabólica basal de una edad negativa <a>
+Entonces la calculadora lanza una excepción.
+
+Esquema del escenario: peso incorrecto
+Dado que tengo una calculadora de salud.
+Cuando calculo la tasa metabólica basal de un peso no válido <w>
+Entonces la calculadora lanza una excepción.
+
+Esquema del escenario: resultado correcto
+Dado que tengo una calculadora de salud.
+Cuando estimo la tasa metabólica basal para los parámetros válidos dados <w>, <h>, <g>, <a>
+Entonces la calculadora arroja un resultado válido <resultado>
+
 
 
 ```
