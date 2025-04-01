@@ -1,0 +1,55 @@
+
+
+
+
+
+# Especificación de Casos de Uso: función Basal Metabolic Rate:
+
+**1.Stakeholders y sus intereses/objetivos:**
+
+-Usuario: Quiere conocer su tasa metabólica basal para gestionar su ingesta calórica.
+
+-Nutricionistas/Entrenadores personales: Usan la información para recomendar dietas y planes de entrenamiento.
+
+-Aplicación/Sistema de Cálculo: Ofrece el servicio de cálculo y puede integrar funciones adicionales
+
+
+**2.Actor principal:** 
+
+Usuario(Persona interesada en concoer su BMR). 
+
+**3.Alcance:** 
+
+Aplicación HealthCalc (Calculadora de Salud).
+
+
+**4.Precondición:** 
+
+-El usuario debe proporcionar información personal básica: peso, altura, edad y sexo.
+
+-La fórmula de cálculo debe estar correctamente implementada en el sistema
+
+
+**5.Garantias:**
+
+Minima-Se muestra un mensaje de error o resultado al usuario.
+
+De éxito: El usuario obtiene un resultado correcto (su peso ideal).
+
+Trigger: El usuario indica que quiere calcular un peso ideal (selecciona la opción de calcular Peso Ideal en el programa HealthCalc).
+
+**6.Escenario principal:**
+1.	El usuario selecciona la opción de calcular BMR en el programa.
+2.	El sistema pide los parámetros (altura,sexo,edad y peso) al usuario. 
+3.	El usuario introduce los valores de los parámetros.
+4.	El sistema calcula su BMR.
+5.	El sistema muestra en pantalla el BMR para los parámetros dados.
+
+Escenario Alternativos:
+3b) el usuario se equivoca al introducir algún parámetro.
+3b1) El sistema muestra un error (especificando que campo tiene el error y una posible razón) y vuelve al paso 2.
+
+
+
+```
+

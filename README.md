@@ -204,6 +204,8 @@ La metodología BDD (Desarrollo Guiado por el Comportamiento) se enfoca en descr
 
 
 <a name="History Peso Ideal"> </a>
+# Desarrollo:
+
 ## User Story:  Cálculo del peso ideal.
 
 Utilizo la estructura implementada en la introducción para definir la historia de usuario del Peso ideal:
@@ -212,6 +214,7 @@ Utilizo la estructura implementada en la introducción para definir la historia 
 Para poder saber el peso ideal**
 
 <a name="History Tasa Metabolica Basal"> </a>
+
 ## User Story:  Cálculo de la tasa metabólica basal.
 
  El use story será muy parecido al caso de peso ideal porque como su nombre lo indica la idea es seguir una plantilla y un sistema que a pesar de estar en lenguaje natural el programa sea capaz de automatizar parte de los test
