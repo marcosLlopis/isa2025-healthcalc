@@ -1,0 +1,253 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------------< uma:Factorial >----------------------------
+[INFO] Building Factorial 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ Factorial ---
+[INFO] skip non existing resourceDirectory /workspaces/isa2025-healthcalc/project-healthcalc/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ Factorial ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ Factorial ---
+[INFO] Copying 2 resources from src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ Factorial ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- surefire:3.0.0-M7:test (default-test) @ Factorial ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running healthcalc.bdd.cucumberTest
+
+@tag @tag1
+Scenario Outline: Invalid Height                                   # feature/bmr.feature:13
+  Given que tengo una calculadora de salud                         # healthcalc.bdd.StepDefTest.que_tengo_una_calculadora_de_salud()
+  When calculo la tasa metabolica basal de una altura invalida -15 # healthcalc.bdd.StepDefTest.estimo_la_tasa_metabolica_basal_con_altura_invalida(int)
+  Then la calculadora lanza una excepcion                          # healthcalc.bdd.StepDefTest.la_calculadora_lanza_una_excepcion()
+
+@tag @tag1
+Scenario Outline: Invalid Height                                  # feature/bmr.feature:14
+  Given que tengo una calculadora de salud                        # healthcalc.bdd.StepDefTest.que_tengo_una_calculadora_de_salud()
+  When calculo la tasa metabolica basal de una altura invalida -1 # healthcalc.bdd.StepDefTest.estimo_la_tasa_metabolica_basal_con_altura_invalida(int)
+  Then la calculadora lanza una excepcion                         # healthcalc.bdd.StepDefTest.la_calculadora_lanza_una_excepcion()
+
+@tag @tag1
+Scenario Outline: Invalid Height                                   # feature/bmr.feature:15
+  Given que tengo una calculadora de salud                         # healthcalc.bdd.StepDefTest.que_tengo_una_calculadora_de_salud()
+  When calculo la tasa metabolica basal de una altura invalida -12 # healthcalc.bdd.StepDefTest.estimo_la_tasa_metabolica_basal_con_altura_invalida(int)
+  Then la calculadora lanza una excepcion                          # healthcalc.bdd.StepDefTest.la_calculadora_lanza_una_excepcion()
+
+@tag @tag2
+Scenario Outline: Invalid Weight                                   # feature/bmr.feature:25
+  Given que tengo una calculadora de salud                         # healthcalc.bdd.StepDefTest.que_tengo_una_calculadora_de_salud()
+  When calculo la tasa metabolica basal de un genero no valido '0' # healthcalc.bdd.StepDefTest.estimo_la_tasa_metabolica_basal_con_genero_invalido(java.lang.String)
+  Then la calculadora lanza una excepcion                          # healthcalc.bdd.StepDefTest.la_calculadora_lanza_una_excepcion()
+
+@tag @tag2
+Scenario Outline: Invalid Weight                                   # feature/bmr.feature:26
+  Given que tengo una calculadora de salud                         # healthcalc.bdd.StepDefTest.que_tengo_una_calculadora_de_salud()
+  When calculo la tasa metabolica basal de un genero no valido 'p' # healthcalc.bdd.StepDefTest.estimo_la_tasa_metabolica_basal_con_genero_invalido(java.lang.String)
+  Then la calculadora lanza una excepcion                          # healthcalc.bdd.StepDefTest.la_calculadora_lanza_una_excepcion()
+
+@tag @tag2
+Scenario Outline: Invalid Weight                                   # feature/bmr.feature:27
+  Given que tengo una calculadora de salud                         # healthcalc.bdd.StepDefTest.que_tengo_una_calculadora_de_salud()
+  When calculo la tasa metabolica basal de un genero no valido '1' # healthcalc.bdd.StepDefTest.estimo_la_tasa_metabolica_basal_con_genero_invalido(java.lang.String)
+  Then la calculadora lanza una excepcion                          # healthcalc.bdd.StepDefTest.la_calculadora_lanza_una_excepcion()
+
+@tag @tag3
+Scenario Outline: Invalid Age                                  # feature/bmr.feature:36
+  Given que tengo una calculadora de salud                     # healthcalc.bdd.StepDefTest.que_tengo_una_calculadora_de_salud()
+  When estimo la tasa metabolica basal de una edad negativa -9 # healthcalc.bdd.StepDefTest.estimo_la_tasa_metabolica_basal_con_edad_negativa(int)
+  Then la calculadora lanza una excepcion                      # healthcalc.bdd.StepDefTest.la_calculadora_lanza_una_excepcion()
+
+@tag @tag3
+Scenario Outline: Invalid Age                                  # feature/bmr.feature:37
+  Given que tengo una calculadora de salud                     # healthcalc.bdd.StepDefTest.que_tengo_una_calculadora_de_salud()
+  When estimo la tasa metabolica basal de una edad negativa -4 # healthcalc.bdd.StepDefTest.estimo_la_tasa_metabolica_basal_con_edad_negativa(int)
+  Then la calculadora lanza una excepcion                      # healthcalc.bdd.StepDefTest.la_calculadora_lanza_una_excepcion()
+
+@tag @tag3
+Scenario Outline: Invalid Age                                   # feature/bmr.feature:38
+  Given que tengo una calculadora de salud                      # healthcalc.bdd.StepDefTest.que_tengo_una_calculadora_de_salud()
+  When estimo la tasa metabolica basal de una edad negativa -97 # healthcalc.bdd.StepDefTest.estimo_la_tasa_metabolica_basal_con_edad_negativa(int)
+  Then la calculadora lanza una excepcion                       # healthcalc.bdd.StepDefTest.la_calculadora_lanza_una_excepcion()
+
+@tag @tag4
+Scenario Outline: Invalid Weight                                 # feature/bmr.feature:48
+  Given que tengo una calculadora de salud                       # healthcalc.bdd.StepDefTest.que_tengo_una_calculadora_de_salud()
+  When calculo la tasa metabolica basal de un peso no valido -12 # healthcalc.bdd.StepDefTest.estimo_la_tasa_metabolica_basal_con_peso_invalido(float)
+  Then la calculadora lanza una excepcion                        # healthcalc.bdd.StepDefTest.la_calculadora_lanza_una_excepcion()
+
+@tag @tag4
+Scenario Outline: Invalid Weight                                 # feature/bmr.feature:49
+  Given que tengo una calculadora de salud                       # healthcalc.bdd.StepDefTest.que_tengo_una_calculadora_de_salud()
+  When calculo la tasa metabolica basal de un peso no valido -21 # healthcalc.bdd.StepDefTest.estimo_la_tasa_metabolica_basal_con_peso_invalido(float)
+  Then la calculadora lanza una excepcion                        # healthcalc.bdd.StepDefTest.la_calculadora_lanza_una_excepcion()
+
+@tag @tag4
+Scenario Outline: Invalid Weight                                # feature/bmr.feature:50
+  Given que tengo una calculadora de salud                      # healthcalc.bdd.StepDefTest.que_tengo_una_calculadora_de_salud()
+  When calculo la tasa metabolica basal de un peso no valido -5 # healthcalc.bdd.StepDefTest.estimo_la_tasa_metabolica_basal_con_peso_invalido(float)
+  Then la calculadora lanza una excepcion                       # healthcalc.bdd.StepDefTest.la_calculadora_lanza_una_excepcion()
+
+@tag @tag6
+Scenario Outline: valid parameters                                                     # feature/bmr.feature:59
+  Given que tengo una calculadora de salud                                             # healthcalc.bdd.StepDefTest.que_tengo_una_calculadora_de_salud()
+  When estimo la tasa metabolica basal para los parametros validos dados 80 170 55 'w' # healthcalc.bdd.StepDefTest.estimo_la_tasa_metabolica_basal_para_parametros_validos(float,int,int,java.lang.String)
+  Then la calculadora arroja un resultado valido '1426.5'                              # healthcalc.bdd.StepDefTest.el_sistema_devuelve_un_resultado(java.lang.String)
+
+@tag @tag6
+Scenario Outline: valid parameters                                                     # feature/bmr.feature:60
+  Given que tengo una calculadora de salud                                             # healthcalc.bdd.StepDefTest.que_tengo_una_calculadora_de_salud()
+  When estimo la tasa metabolica basal para los parametros validos dados 80 171 55 'm' # healthcalc.bdd.StepDefTest.estimo_la_tasa_metabolica_basal_para_parametros_validos(float,int,int,java.lang.String)
+  Then la calculadora arroja un resultado valido '1598.75'                             # healthcalc.bdd.StepDefTest.el_sistema_devuelve_un_resultado(java.lang.String)
+
+@tag @tag1
+Scenario Outline: Altura invalida                           # feature/peso.feature:15
+  Given que tengo una calculadora de salud                  # healthcalc.bdd.StepDefTest.que_tengo_una_calculadora_de_salud()
+  When calculo el peso ideal para una altura no valida -199 # healthcalc.bdd.StepDefTest.estimo_el_peso_ideal_para_una_altura_negativa(int)
+  Then la calculadora lanza una excepcion                   # healthcalc.bdd.StepDefTest.la_calculadora_lanza_una_excepcion()
+
+@tag @tag1
+Scenario Outline: Altura invalida                         # feature/peso.feature:16
+  Given que tengo una calculadora de salud                # healthcalc.bdd.StepDefTest.que_tengo_una_calculadora_de_salud()
+  When calculo el peso ideal para una altura no valida -1 # healthcalc.bdd.StepDefTest.estimo_el_peso_ideal_para_una_altura_negativa(int)
+  Then la calculadora lanza una excepcion                 # healthcalc.bdd.StepDefTest.la_calculadora_lanza_una_excepcion()
+
+@tag @tag1
+Scenario Outline: Altura invalida                        # feature/peso.feature:17
+  Given que tengo una calculadora de salud               # healthcalc.bdd.StepDefTest.que_tengo_una_calculadora_de_salud()
+  When calculo el peso ideal para una altura no valida 0 # healthcalc.bdd.StepDefTest.estimo_el_peso_ideal_para_una_altura_negativa(int)
+  Then la calculadora lanza una excepcion                # healthcalc.bdd.StepDefTest.la_calculadora_lanza_una_excepcion()
+
+@tag @tag2
+Scenario Outline: Genero invalido                          # feature/peso.feature:28
+  Given que tengo una calculadora de salud                 # healthcalc.bdd.StepDefTest.que_tengo_una_calculadora_de_salud()
+  When calculo el peso ideal para un genero no valido '10' # healthcalc.bdd.StepDefTest.estimo_el_peso_ideal_para_un_genero_invalido(java.lang.String)
+  Then la calculadora lanza una excepcion                  # healthcalc.bdd.StepDefTest.la_calculadora_lanza_una_excepcion()
+
+@tag @tag2
+Scenario Outline: Genero invalido                         # feature/peso.feature:29
+  Given que tengo una calculadora de salud                # healthcalc.bdd.StepDefTest.que_tengo_una_calculadora_de_salud()
+  When calculo el peso ideal para un genero no valido 'w' # healthcalc.bdd.StepDefTest.estimo_el_peso_ideal_para_un_genero_invalido(java.lang.String)
+  Then la calculadora lanza una excepcion                 # healthcalc.bdd.StepDefTest.la_calculadora_lanza_una_excepcion()
+      org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:180)
+	at healthcalc.bdd.StepDefTest.la_calculadora_lanza_una_excepcion(StepDefTest.java:35)
+	at ✽.la calculadora lanza una excepcion(classpath:feature/peso.feature:24)
+
+
+@tag @tag2
+Scenario Outline: Genero invalido                         # feature/peso.feature:30
+  Given que tengo una calculadora de salud                # healthcalc.bdd.StepDefTest.que_tengo_una_calculadora_de_salud()
+  When calculo el peso ideal para un genero no valido 'p' # healthcalc.bdd.StepDefTest.estimo_el_peso_ideal_para_un_genero_invalido(java.lang.String)
+  Then la calculadora lanza una excepcion                 # healthcalc.bdd.StepDefTest.la_calculadora_lanza_una_excepcion()
+
+@tag @tag3
+Scenario Outline: resultado negativo                                                    # feature/peso.feature:40
+  Given que tengo una calculadora de salud                                              # healthcalc.bdd.StepDefTest.que_tengo_una_calculadora_de_salud()
+  When calculo el peso ideal para el sexo 'm' y la altura 79 y da un resultado negativo # healthcalc.bdd.StepDefTest.estimo_el_peso_ideal_para_genero_y_altura_y_da_un_resultado_negativo(java.lang.String,int)
+  Then la calculadora lanza una excepcion                                               # healthcalc.bdd.StepDefTest.la_calculadora_lanza_una_excepcion()
+
+@tag @tag3
+Scenario Outline: resultado negativo                                                    # feature/peso.feature:41
+  Given que tengo una calculadora de salud                                              # healthcalc.bdd.StepDefTest.que_tengo_una_calculadora_de_salud()
+  When calculo el peso ideal para el sexo 'w' y la altura 69 y da un resultado negativo # healthcalc.bdd.StepDefTest.estimo_el_peso_ideal_para_genero_y_altura_y_da_un_resultado_negativo(java.lang.String,int)
+  Then la calculadora lanza una excepcion                                               # healthcalc.bdd.StepDefTest.la_calculadora_lanza_una_excepcion()
+
+@tag @tag3
+Scenario Outline: resultado negativo                                                    # feature/peso.feature:42
+  Given que tengo una calculadora de salud                                              # healthcalc.bdd.StepDefTest.que_tengo_una_calculadora_de_salud()
+  When calculo el peso ideal para el sexo 'm' y la altura 45 y da un resultado negativo # healthcalc.bdd.StepDefTest.estimo_el_peso_ideal_para_genero_y_altura_y_da_un_resultado_negativo(java.lang.String,int)
+  Then la calculadora lanza una excepcion                                               # healthcalc.bdd.StepDefTest.la_calculadora_lanza_una_excepcion()
+
+@tag @tag3
+Scenario Outline: resultado negativo                                                    # feature/peso.feature:43
+  Given que tengo una calculadora de salud                                              # healthcalc.bdd.StepDefTest.que_tengo_una_calculadora_de_salud()
+  When calculo el peso ideal para el sexo 'w' y la altura 45 y da un resultado negativo # healthcalc.bdd.StepDefTest.estimo_el_peso_ideal_para_genero_y_altura_y_da_un_resultado_negativo(java.lang.String,int)
+  Then la calculadora lanza una excepcion                                               # healthcalc.bdd.StepDefTest.la_calculadora_lanza_una_excepcion()
+
+@tag @tag4
+Scenario Outline: resultado de peso ideal                     # feature/peso.feature:53
+  Given que tengo una calculadora de salud                    # healthcalc.bdd.StepDefTest.que_tengo_una_calculadora_de_salud()
+  When calculo el peso ideal para el sexo 'w' y la altura 150 # healthcalc.bdd.StepDefTest.estimo_el_peso_ideal_para_genero_y_altura(java.lang.String,int)
+  Then la calculadora da un resultado '50'                    # healthcalc.bdd.StepDefTest.la_calculadora_devuelve_un_resultado(java.lang.String)
+
+@tag @tag4
+Scenario Outline: resultado de peso ideal                     # feature/peso.feature:54
+  Given que tengo una calculadora de salud                    # healthcalc.bdd.StepDefTest.que_tengo_una_calculadora_de_salud()
+  When calculo el peso ideal para el sexo 'w' y la altura 171 # healthcalc.bdd.StepDefTest.estimo_el_peso_ideal_para_genero_y_altura(java.lang.String,int)
+  Then la calculadora da un resultado '62.6'                  # healthcalc.bdd.StepDefTest.la_calculadora_devuelve_un_resultado(java.lang.String)
+
+@tag @tag4
+Scenario Outline: resultado de peso ideal                     # feature/peso.feature:55
+  Given que tengo una calculadora de salud                    # healthcalc.bdd.StepDefTest.que_tengo_una_calculadora_de_salud()
+  When calculo el peso ideal para el sexo 'm' y la altura 171 # healthcalc.bdd.StepDefTest.estimo_el_peso_ideal_para_genero_y_altura(java.lang.String,int)
+  Then la calculadora da un resultado '65.75'                 # healthcalc.bdd.StepDefTest.la_calculadora_devuelve_un_resultado(java.lang.String)
+
+@tag @tag4
+Scenario Outline: resultado de peso ideal                     # feature/peso.feature:56
+  Given que tengo una calculadora de salud                    # healthcalc.bdd.StepDefTest.que_tengo_una_calculadora_de_salud()
+  When calculo el peso ideal para el sexo 'm' y la altura 173 # healthcalc.bdd.StepDefTest.estimo_el_peso_ideal_para_genero_y_altura(java.lang.String,int)
+  Then la calculadora da un resultado '67.25'                 # healthcalc.bdd.StepDefTest.la_calculadora_devuelve_un_resultado(java.lang.String)
+[ERROR] Tests run: 28, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.315 s <<< FAILURE! - in healthcalc.bdd.cucumberTest
+[ERROR] Examples.Example #2  Time elapsed: 0.009 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:180)
+	at healthcalc.bdd.StepDefTest.la_calculadora_lanza_una_excepcion(StepDefTest.java:35)
+	at ✽.la calculadora lanza una excepcion(classpath:feature/peso.feature:24)
+
+[INFO] Running healthcalc.HealthCalcTest
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.057 s - in healthcalc.HealthCalcTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR] Examples.Example #2
+[INFO]   Run 1: PASS
+[INFO]   Run 2: PASS
+[INFO]   Run 3: PASS
+[INFO]   Run 4: PASS
+[INFO]   Run 5: PASS
+[INFO]   Run 6: PASS
+[ERROR]   Run 7: expected: <true> but was: <false>
+[INFO]   Run 8: PASS
+[INFO]   Run 9: PASS
+[INFO] 
+[INFO] 
+[ERROR] Tests run: 32, Failures: 1, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.210 s
+[INFO] Finished at: 2025-04-01T21:16:03Z
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.0.0-M7:test (default-test) on project Factorial: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /workspaces/isa2025-healthcalc/project-healthcalc/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
