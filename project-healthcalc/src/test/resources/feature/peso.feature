@@ -46,13 +46,13 @@ Feature: Calcular Peso ideal
   Scenario Outline: resultado de peso ideal
     Given que tengo una calculadora de salud
     When calculo el peso ideal para el sexo <g> y la altura <h>
-    Then la calculadora da un resultado <resultado>
+    Then la calculadora da un resultado <value>
 
    	Examples: 
-      | g |  h | resultado |
-      |'w'| 150| '55' |
-      |'w'| 171|'61'|
-      |'m'| 171|'64'|
-      |'m'| 173|'67' |
+      | g |  h | value |
+      |'w'| 150| '50' |
+      |'w'| 171|'62.6'|
+      |'m'| 171|'65.75'|
+      |'m'| 173|'67.25' |
 
       

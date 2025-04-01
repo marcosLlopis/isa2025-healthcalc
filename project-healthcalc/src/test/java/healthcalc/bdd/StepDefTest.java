@@ -44,10 +44,10 @@ public class StepDefTest{
 		}
 	}
 
-	@When("calculo el peso ideal para el genero y altura y da un resultado negativo")
-	public void estimo_el_peso_ideal_para_genero_y_altura_y_da_un_resultado_negativo(char gender, int height) {
+	@When("calculo el peso ideal para el sexo {string} y la altura {int} y da un resultado negativo")
+	public void estimo_el_peso_ideal_para_genero_y_altura_y_da_un_resultado_negativo(String gender, int height) {
 		try {
-			calculadora.idealWeight(height, 'M');
+			calculadora.idealWeight(height, gender.charAt(0));
 		} catch (Exception e) {
 			excepcion = true;
 		}
@@ -104,7 +104,8 @@ public class StepDefTest{
 
 	@When("estimo la tasa metabolica basal para los parametros validos dados {float} {int} {int} {string}")
 	public void estimo_la_tasa_metabolica_basal_para_parametros_validos(float weight, int height, int age, String gender) throws Exception {
-		calculadora.basalMetabolicRate(weight, height, age, gender.charAt(0));
+		resultado=calculadora.basalMetabolicRate(weight, height, age, gender.charAt(0));
+		
 	}
 
 	@Then("la calculadora arroja un resultado valido {string}")

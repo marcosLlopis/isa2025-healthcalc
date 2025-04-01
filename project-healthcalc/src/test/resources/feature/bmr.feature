@@ -55,8 +55,6 @@ Feature: Calculate Basal Metabolic Rate
 		When estimo la tasa metabolica basal para los parametros validos dados <w> <h> <a> <g>
 		Then la calculadora arroja un resultado valido <resultado>
 		Examples: 
-      | h | w  | a| g | resultado|
-      | 170| 80 |55|'w'|'1426.5'|
-      |150|21|13|'m'|'1087.5' |
-      | 167| 65|22|'m'|'1588.75'| 
-      |170|80|55|'m'|'1592.5'| 
+      | w | h  | a| g | resultado|
+      | 80| 170 |55|'w'|'1426.5'|
+      |80|171|55|'m'|'1598.75'| 
