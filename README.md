@@ -17,6 +17,13 @@ Se desea desarrollar una calculadora que permita estimar varios parámetros de s
       <ol> <li><a href="#Introduccion">Introducción practica2</a>
         <li><a href="#Diagrama caso de uso">Diagrama de casos:</a></li>
         <li><a href="#Especificacion">especificación del caso de uso</a></li></ol> </li>
+     <li><a href="#Practica 3">Practica3</a></li>
+      <ol> <li><a href="#Introducción">Introducción practica3</a>
+      <li><a href="#History Peso Ideal">User Story: Peso ideal de un persona:</a></li>
+      <li><a href="#History Tasa Metabolica Basal">User Story:  Cálculo de la tasa metabólica basal de una persona:</a></li>
+       <ol> <li><a href="#Aceptacion Peso Ideal">Criterios de aceptación</a></li></ol> </li>
+       <li><a href="#Aceptacion Metabolica Basal">Criterios de aceptacion</a></li></ol> </li>
+
    </ol>
 </details>
 
@@ -159,6 +166,120 @@ Escenario Alternativos:
 3b1) El sistema muestra un error (especificando que campo tiene el error y una posible razón) y vuelve al paso 2.
 
 
+<a name="Practica 3"></a>
+# Práctica 3
+
+<a name="Introducción"></a>
+# Introducción: 
+
+Las historias de usuario son descripciones breves y sencillas de una funcionalidad de software desde la perspectiva del usuario final. Se utilizan en el desarrollo ágil para capturar los requisitos del usuario de una manera que sea fácil de entender y priorizar.
+
+A su vez se usará Cucumber que es una herramienta para automatizar pruebas BDD (Desarrollo Guiado por el Comportamiento). Es decir pruebas que se centran en el comportamiento del sistema y utiliza lenguaje natural para definir pruebas automatizadas.
+
+
+* **Objetivo:**
+
+Implementar historias de usuario y criterios de aceptación siguiendo la metodología BDD (Desarrollo Guiado por el Comportamiento), a través de Gherkin y Cucumber.
+
+La metodología BDD (Desarrollo Guiado por el Comportamiento) se enfoca en describir el comportamiento de la aplicación desde la perspectiva del usuario, utilizando un lenguaje sencillo y comprensible para todos los involucrados. Gherkin es el lenguaje utilizado para escribir las especificaciones de comportamiento, y Cucumber es la herramienta que ejecuta estas especificaciones como pruebas automatizadas.
+
+* **Estructura:**
+
+**Historias de usuario:** Se redactan con el formato "Como [rol de usuario], Necesito [funcionalidad], Para [objetivo o beneficio]", permitiendo describir claramente los requerimientos y metas de los usuarios.
+
+**Criterios de aceptación:** Se estructuran de la siguiente manera: "Dado que [situación o contexto], Cuando [evento o acción], Entonces [resultado esperado]", con el fin de definir cómo debe comportarse el sistema en distintos escenarios.
+
+*  **Beneficios:**
+
+**Enfoque en el usuario:** Las historias de usuario ayudan a los equipos de desarrollo a centrarse en las necesidades del usuario.
+
+**Comunicación clara:** Las historias de usuario son fáciles de entender para todos los miembros del equipo, incluidos los no técnicos.
+
+**Flexibilidad:** se pueden adaptar fácilmente a los cambios en los requisitos.
+
+**Priorización:** pueden priorizar según su valor para el usuario.
+
+**Colaboración:** Las historias de usuario fomentan la colaboración entre el equipo de desarrollo y el usuario.
+
+
+
+<a name="History Peso Ideal"> </a>
+# Desarrollo:
+
+## User Story:  Cálculo del peso ideal.
+
+Utilizo la estructura implementada en la introducción para definir la historia de usuario del Peso ideal:
+
+**Como usuario de la calculadora de salud, necesito calcular el peso ideal para los parámetros dados 
+Para poder saber el peso ideal**
+
+<a name="History Tasa Metabolica Basal"> </a>
+
+## User Story:  Cálculo de la tasa metabólica basal.
+
+ El use story será muy parecido al caso de peso ideal porque como su nombre lo indica la idea es seguir una plantilla y un sistema que a pesar de estar en lenguaje natural el programa sea capaz de automatizar parte de los test
+
+Utilizo la estructura implementada en la introducción para definir la historia de usuario de la Tasa Metabolica Basal:
+
+**Como usuario de la calculadora de salud, quiero calcular la tasa metabólica basal para los parámetros dados, para poder saber la tasa metabólica basal.**
+
+
+
+<a name="Aceptacion Peso Ideal"> </a>
+
+## Criterio de Aceptación:  Cálculo del peso ideal de un persona.
+
+Esquema del escenario: altura no válida
+Dado que tengo una calculadora de salud.
+Cuando calculo el peso ideal para una altura no válida <h>
+Entonces la calculadora lanza una excepción.
+
+Esquema del escenario: género no válido
+Dado que tengo una calculadora de salud.
+Cuando calculo el peso ideal para un género no válido <g>
+Entonces la calculadora lanza una excepción.
+
+Esquema del escenario: resultado negativo
+Dado que tengo una calculadora de salud.
+Cuando calculo el peso ideal para el sexo <g> y la altura <h> y da un resultado negativo
+Entonces la calculadora lanza una excepción.
+
+Esquema del escenario: resultado de peso ideal
+Dado que tengo una calculadora de salud.
+Cuando calculo el peso ideal para el sexo <g> y la altura <h>
+Luego la calculadora da un resultado <valor>
+
+
+
+<a name="Aceptación Metabolica Basal"> </a>
+
+## Criterio de Aceptación: Tasa metabólica basal de una persona
+
+Esquema del escenario: altura no válida
+Dado que tengo una calculadora de salud.
+Cuando calculo la tasa metabólica basal de una altura inválida <h>
+Entonces la calculadora lanza una excepción.
+
+Esquema del escenario: genero no válido
+Dado que tengo una calculadora de salud.
+Cuando calculo la tasa metabólica basal de un género no válido <g>
+Entonces la calculadora lanza una excepción.
+
+Esquema del escenario: edad incorrecta
+Dado que tengo una calculadora de salud.
+Cuando estimo la tasa metabólica basal de una edad negativa <a>
+Entonces la calculadora lanza una excepción.
+
+Esquema del escenario: peso incorrecto
+Dado que tengo una calculadora de salud.
+Cuando calculo la tasa metabólica basal de un peso no válido <w>
+Entonces la calculadora lanza una excepción.
+
+Esquema del escenario: resultado correcto
+Dado que tengo una calculadora de salud.
+Cuando estimo la tasa metabólica basal para los parámetros válidos dados <w>, <h>, <g>, <a>
+Entonces la calculadora arroja un resultado válido <resultado>
+
+
 
 ```
-
